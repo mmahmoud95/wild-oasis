@@ -1,6 +1,6 @@
 import Reservation from '@/_components/Reservation';
 import Spinner from '@/_components/Spinner';
-import Cabin from '@/_components/cabin';
+import Cabin from '@/_components/Cabin';
 import { getCabin, getCabins } from '@/_lib/data-service';
 import { Suspense } from 'react';
 
