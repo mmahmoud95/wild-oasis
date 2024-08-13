@@ -62,7 +62,6 @@ const UpdateProfileForm = ({ children, guest }) => {
 
 function Button() {
     const { pending } = useFormStatus();
-    console.log(pending);
     return (
         <button
             disabled={pending}

@@ -29,7 +29,6 @@ const navLinks = [
 
 function SideNavigation() {
     const pathName = usePathname();
-    console.log(pathName);
     return (
         <nav className="lg:border-r border-primary-900">
             <ul className="grid grid-cols-2 lg:grid-cols-1 gap-2 text-lg">

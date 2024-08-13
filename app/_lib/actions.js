@@ -26,10 +26,10 @@ export async function updateGuest(FormData) {
     if (!session) throw new Error('You must be logged in');
 
     const nationalID = FormData.get('nationalID');
-    const [nationalty, countryFlag] = FormData.get('nationality').split('%');
+    const [nationality, countryFlag] = FormData.get('nationality').split('%');
     if (!/^[a-zA-Z0-9]{6,12}$/.test(nationalID))
         throw new Error('Please provide a valid nationalID');
-    const updateData = { nationalty, countryFlag, nationalID };
+    const updateData = { nationality, countryFlag, nationalID };
     await updateGuestSupabase(session.user.guestId, updateData);
 }
 
