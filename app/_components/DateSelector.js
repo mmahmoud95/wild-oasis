@@ -35,9 +35,9 @@ function DateSelector({ cabin, settings, bookedDates }) {
 
     return (
         <div className="flex flex-col justify-between">
-            <div className="px-2 text-sm">
+            <div className="px-2 text-sm w-full">
                 <DayPicker
-                    className="pt-12 place-self-center"
+                    className="pt-6 pb-6 place-self-center"
                     mode="range"
                     onSelect={setRange}
                     selected={displayRange}
@@ -46,15 +46,15 @@ function DateSelector({ cabin, settings, bookedDates }) {
                     fromMonth={new Date()}
                     fromDate={new Date()}
                     toYear={new Date().getFullYear() + 5}
-                    captionLayout="dropdown"
-                    numberOfMonths={2}
+                    captionLayout="dropdown-buttons"
+                    numberOfMonths={1}
                     disabled={(curDate) =>
                         isPast(curDate) ||
                         bookedDates.some((date) => isSameDay(date, curDate))
                     }
                 />
             </div>
-            <div className="flex items-center justify-between px-8 bg-accent-500 text-primary-800 h-[72px]">
+            <div className="flex items-center justify-between px-8 bg-accent-500 text-primary-800 h-[42px] md:h-[72px]">
                 <div className="flex items-baseline gap-6">
                     <p className="flex gap-2 items-baseline">
                         {discount > 0 ? (

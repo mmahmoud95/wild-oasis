@@ -1,0 +1,8 @@
+@media (max-width: 640px) {
+    .about {
+        div:first-child {
+            grid-row: 2;
+        }
+        column-gap: 0;
+    }
+}

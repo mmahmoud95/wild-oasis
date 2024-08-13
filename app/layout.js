@@ -6,6 +6,7 @@ import { Josefin_Sans } from 'next/font/google';
 import Header from '@/_components/Header';
 import { ReservationProvider } from '@/_components/ReservationContext';
 import { SessionProvider } from 'next-auth/react';
+import Footer from './_components/Footer';
 const josefin = Josefin_Sans({
     subsets: ['latin'],
     display: 'swap',
@@ -35,6 +36,7 @@ export default function RootLayout({ children }) {
                         {/* </SessionProvider> */}
                     </main>
                 </div>
+                <Footer />
             </body>
         </html>
     );

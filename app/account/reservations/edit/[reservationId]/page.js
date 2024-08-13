@@ -20,7 +20,7 @@ export default async function Page({ params: { reservationId } }) {
                 className="bg-primary-900 py-8 px-12 text-lg flex gap-6 flex-col"
             >
                 <div className="space-y-2">
-                    <input name="id" defaultValue={reservationId} hidden/>
+                    <input name="id" defaultValue={reservationId} hidden />
                     <label htmlFor="numGuests">How many guests?</label>
                     <select
                         defaultValue={data.numGuests}
@@ -54,7 +54,9 @@ export default async function Page({ params: { reservationId } }) {
                 </div>
 
                 <div className="flex justify-end items-center gap-6">
-                    <Button />
+                    <Button pendingLabel="Updating...">
+                        Update reservation
+                    </Button>
                 </div>
             </form>
         </div>

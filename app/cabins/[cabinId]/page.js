@@ -20,9 +20,7 @@ export async function generateStaticParams() {
 }
 
 export default async function Page({ params: { cabinId } }) {
-    console.log(process.env.NEXT_PUBLIC_API_DOMAIN);
     const cabin = await getCabin(cabinId);
-
     return (
         <div className="max-w-6xl mx-auto mt-8">
             <Cabin cabin={cabin} />

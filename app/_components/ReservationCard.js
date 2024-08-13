@@ -25,7 +25,7 @@ function ReservationCard({ booking, onDelete }) {
 
     return (
         <div className="flex border border-primary-800">
-            <div className="relative h-32 aspect-square">
+            <div className="relative h-36 aspect-square hidden sm:block">
                 <Image
                     src={image}
                     alt={`Cabin ${name}`}
@@ -44,13 +44,13 @@ function ReservationCard({ booking, onDelete }) {
                             past
                         </span>
                     ) : (
-                        <span className="bg-green-800 text-green-200 h-7 px-3 uppercase text-xs font-bold flex items-center rounded-sm">
+                        <span className="bg-green-800 text-green-200 h-7 px-3 uppercase text-xs font-bold flex items-center rounded-sm mb-4">
                             upcoming
                         </span>
                     )}
                 </div>
 
-                <p className="text-lg text-primary-300">
+                <p className="text-lg text-primary-300 mb-2">
                     {format(new Date(startDate), 'EEE, MMM dd yyyy')} (
                     {isToday(new Date(startDate))
                         ? 'Today'

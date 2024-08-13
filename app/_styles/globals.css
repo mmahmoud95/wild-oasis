@@ -45,8 +45,26 @@ body {
 
 /* For data picker */
 .rdp {
-    --rdp-cell-size: 32px !important;
+    --rdp-cell-size: 42px !important;
     --rdp-accent-color: theme('colors.accent.500') !important;
     --rdp-background-color: theme('colors.accent.600') !important;
     margin: 0 !important;
 }
+.rdp-months {
+    justify-content: center;
+}
+@media (max-width: 768px) {
+    html {
+        font-size: 75%;
+    }
+}
+@media (max-width: 640px) {
+    html {
+        font-size: 68.75%;
+    }
+}
+/* @media (max-width: 550px) {
+    html {
+        font-size: 60%;
+    }
+} */

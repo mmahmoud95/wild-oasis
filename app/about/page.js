@@ -3,6 +3,7 @@ import Link from 'next/link';
 import about_1 from '/public/about-1.jpg';
 import about_2 from '/public/about-2.jpg';
 import { getCabins } from '@/_lib/data-service';
+import './about.css';
 
 export const metadata = {
     title: 'About',
@@ -11,12 +12,12 @@ export const metadata = {
 export const revalidate = 86400;
 const About = async () => {
     const cabins = await getCabins();
-    return (
-        <div className="grid grid-cols-5 gap-x-24 gap-y-32 text-lg items-center">
+    return (<><h1 className="text-4xl mb-10 text-accent-400 font-medium">
+        Welcome to The Wild Oasis
+    </h1>
+        <div className="about grid sm:grid-cols-5 grid-cols-2 gap-x-24 gap-y-32 text-lg items-center">
             <div className="col-span-3">
-                <h1 className="text-4xl mb-10 text-accent-400 font-medium">
-                    Welcome to The Wild Oasis
-                </h1>
+
 
                 <div className="space-y-8">
                     <p>
@@ -88,7 +89,7 @@ const About = async () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </div></>
     );
 };
 export default About;
