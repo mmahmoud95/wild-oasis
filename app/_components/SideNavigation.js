@@ -31,16 +31,15 @@ function SideNavigation() {
     const pathName = usePathname();
     console.log(pathName);
     return (
-        <nav className="lg:border-r border-primary-900 ">
-            <ul className="flex lg:flex-col gap-2 h-full text-lg">
+        <nav className="lg:border-r border-primary-900">
+            <ul className="grid grid-cols-2 lg:grid-cols-1 gap-2 text-lg">
                 {navLinks.map((link) => (
                     <li key={link.name}>
                         <Link
-                            className={`py-3 px-5 hover:bg-primary-900 hover:text-primary-100 transition-colors flex items-center gap-4 font-semibold text-primary-200 ${
-                                pathName === link.href
-                                    ? 'bg-primary-900 text-primary-100'
-                                    : ''
-                            }`}
+                            className={`py-3 px-5 hover:bg-primary-900 hover:text-primary-100 transition-colors flex items-center gap-4 font-semibold text-primary-200 ${pathName === link.href
+                                ? 'bg-primary-900 text-primary-100'
+                                : ''
+                                }`}
                             href={link.href}
                         >
                             {link.icon}
