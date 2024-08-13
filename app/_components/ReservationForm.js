@@ -11,8 +11,8 @@ function ReservationForm({ cabin, user }) {
     const { maxCapacity, regularPrice, discount, id } = cabin;
     const { range, setRange, resetRange } = useReservation();
 
-    const startDate = range.from;
-    const endDate = range.to;
+    const startDate = range?.from;
+    const endDate = range?.to;
 
     const numNights = differenceInDays(endDate, startDate);
     const cabinPrice = numNights * (regularPrice - discount);
