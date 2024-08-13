@@ -6,8 +6,8 @@ const Navigation = async () => {
     const session = await auth();
     console.log(session);
     return (
-        <nav className="z-10 text-2xl">
-            <ul className="flex gap-6 sm:gap-16 items-center">
+        <nav className="z-10 text-2xl mt-4 sm:mt-0">
+            <ul className="flex gap-12 sm:gap-16 items-center">
                 <li>
                     <Link
                         href="/cabins"
