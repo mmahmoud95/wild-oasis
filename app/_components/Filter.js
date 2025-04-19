@@ -1,6 +1,5 @@
 'use client';
 import {
-    useParams,
     usePathname,
     useRouter,
     useSearchParams,

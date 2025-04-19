@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import about_1 from '/public/about-1.jpg';
-import about_2 from '/public/about-2.jpg';
+import about_1 from '/public/about-1.webp';
+import about_2 from '/public/about-2.webp';
 import { getCabins } from '@/_lib/data-service';
 import './about.css';
 

@@ -1,5 +1,4 @@
 import { signInAction } from '@/_lib/actions';
-import { auth } from '@/_lib/auth';
 
 function SignInButton() {
     return (

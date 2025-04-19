@@ -1,11 +1,9 @@
 'use server';
 
-import { formatDate } from 'date-fns';
 import { auth, signIn, signOut } from './auth';
 import {
     createBookingSupabase,
     deleteBookingSupabase,
-    getBooking,
     getBookings,
     updateBookingSupabase,
     updateGuestSupabase,
@@ -55,11 +53,8 @@ export async function updateBooking(FormData) {
 }
 
 export async function createBooking(bookingData, formData) {
-    console.log(bookingData, FormData);
     const session = await auth();
-    console.log(session);
     if (!session) throw new Error('You must be logged in');
-
     const newBooking = {
         ...bookingData,
         guestId: session.user.guestId,

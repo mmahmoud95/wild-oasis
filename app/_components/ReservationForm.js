@@ -1,5 +1,4 @@
 'use client';
-import { useSession } from 'next-auth/react';
 
 import { useReservation } from './ReservationContext';
 import { createBooking } from '@/_lib/actions';
@@ -7,7 +6,7 @@ import { differenceInDays } from 'date-fns';
 import { Button } from './Button';
 
 function ReservationForm({ cabin, user }) {
-    // CHANGE
+   
     const { maxCapacity, regularPrice, discount, id } = cabin;
     const { range, setRange, resetRange } = useReservation();
 
@@ -16,8 +15,6 @@ function ReservationForm({ cabin, user }) {
 
     const numNights = differenceInDays(endDate, startDate);
     const cabinPrice = numNights * (regularPrice - discount);
-    // const session = useSession();
-    // console.log(session);
 
     const bookingData = {
         startDate,

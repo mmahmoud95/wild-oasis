@@ -1,7 +1,6 @@
 import { Inter } from 'next/font/google';
 import '@/_styles/globals.css';
 
-// const inter = Inter({ subsets: ['latin'] });
 import { Josefin_Sans } from 'next/font/google';
 import Header from '@/_components/Header';
 import { ReservationProvider } from '@/_components/ReservationContext';
@@ -12,7 +11,6 @@ const josefin = Josefin_Sans({
     display: 'swap',
 });
 export const metadata = {
-    // title: 'The wild Oasis',
     title: {
         template: '%s | The Wild Oasis',
         default: 'Welcome | The Wild Oasis',

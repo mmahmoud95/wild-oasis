@@ -3,8 +3,6 @@ import { updateBooking } from '@/_lib/actions';
 import { getBooking, getCabin } from '@/_lib/data-service';
 
 export default async function Page({ params: { reservationId } }) {
-    // CHANGE
-
 
     const data = await getBooking(reservationId);
     const { maxCapacity } = await getCabin(data.cabinId);
