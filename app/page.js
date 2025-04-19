@@ -11,6 +11,7 @@ export default function Home() {
                 fill
                 alt="Mountains and forests with two cabins"
                 placeholder="blur"
+                priority
                 className="object-top"
                 quality={90}
             />
